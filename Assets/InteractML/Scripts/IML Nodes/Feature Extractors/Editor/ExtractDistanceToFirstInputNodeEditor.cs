@@ -29,7 +29,7 @@ namespace InteractML.FeatureExtractors
             InputPortsNamesOverride = new Dictionary<string, string>();
             OutputPortsNamesOverride = new Dictionary<string, string>();
             base.InputPortsNamesOverride.Add("FirstInput", "First Input");
-            base.InputPortsNamesOverride.Add("SecondInput", "Second Input");
+            base.InputPortsNamesOverride.Add("SecondInputs", "Second Input");
             base.OutputPortsNamesOverride.Add("DistanceBetweenInputs", "Distance\nBetween\nInputs");
             base.nodeTips = m_ExtractDistanceToFirstInput.tooltips;
             m_BodyRect.height = 100;
@@ -58,14 +58,15 @@ namespace InteractML.FeatureExtractors
 
             if (m_ExtractDistanceToFirstInput.FeatureValues.Values == null || m_ExtractDistanceToFirstInput.FeatureValues.Values.Length == 0)
             {
-                EditorGUILayout.LabelField("distance between inputs: " + 0, m_NodeSkin.GetStyle("Node Body Label"));
+                EditorGUILayout.LabelField("Connect 2 inputs", m_NodeSkin.GetStyle("Node Body Label"));
             }
             else
             {
-                // Go through the list output distances
+                // Go through the list of output distances
+                EditorGUILayout.LabelField("Distance between first input", m_NodeSkin.GetStyle("Node Body Label"));
                 for (int i = 0; i < m_ExtractDistanceToFirstInput.FeatureValues.Values.Length; i++)
                 {
-                    EditorGUILayout.LabelField("distance between inputs: " + m_ExtractDistanceToFirstInput.FeatureValues.Values[i], m_NodeSkin.GetStyle("Node Body Label"));
+                    EditorGUILayout.LabelField("and input " + (i+1) + ": " + m_ExtractDistanceToFirstInput.FeatureValues.Values[i], m_NodeSkin.GetStyle("Node Body Label"));
                 }
             }
             GUILayout.EndArea();

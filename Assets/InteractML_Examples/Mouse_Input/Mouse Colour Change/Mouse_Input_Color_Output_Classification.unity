@@ -257,15 +257,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c477b3f40f547843930edfdcbde5951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MLController: {fileID: 11400000, guid: 9e2fe998361fad74b9687f803bfa59ef, type: 2}
+  MLController: {fileID: 11400000, guid: aa1967588fde34b42a63f967878b24cb, type: 2}
   GameObjectsToUse:
   - {fileID: 77529449}
   m_ScriptNodesList:
-  - {fileID: 3829375924371095371, guid: 9e2fe998361fad74b9687f803bfa59ef, type: 2}
+  - {fileID: 7664542125311193265, guid: 9e2fe998361fad74b9687f803bfa59ef, type: 2}
   FeaturesUpdated: 1
   ComponentsWithIMLData:
   - GameComponent: {fileID: 2057764850}
     ControlClones: 0
+  m_MonoBehavioursPerScriptNode:
+    m_keys:
+    - {fileID: 2057764850}
+    m_values:
+    - {fileID: 7664542125311193265, guid: 9e2fe998361fad74b9687f803bfa59ef, type: 2}
+  m_MonobehaviourClones: []
 --- !u!4 &266555835
 Transform:
   m_ObjectHideFlags: 0
