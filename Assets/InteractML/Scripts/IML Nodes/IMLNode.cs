@@ -9,10 +9,13 @@ namespace InteractML
     {
         [HideInInspector]
         public IMLNodeTooltips tooltips;
+        [HideInInspector]
+        public string id;
         // Use this for initialization
         protected override void Init()
         {
             base.Init();
+            id = NodeID.CheckNodeID(id, this);
 
         }
 
